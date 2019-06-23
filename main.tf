@@ -17,3 +17,14 @@ resource "aws_instance" "ibrah-useast-1a" {
     Name = "ibrah-useast-1a"
   }
 }
+
+resource "aws_security_group" "webserver" {
+  name = "webserver"
+
+  ingress {
+    from_port = 8080
+    to_port = 8080
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
