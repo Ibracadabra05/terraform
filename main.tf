@@ -6,6 +6,7 @@ provider "aws" {
 resource "aws_instance" "ibrah-useast-1a" {
   ami           = "ami-40d28157"
   instance_type = "t2.micro"
+  vpc_security_group_ids = ["${aws_security_group.webserver.id}"]
 
   user_data = <<-EOF
               #!/bin/bash
