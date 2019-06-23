@@ -7,7 +7,7 @@ resource "aws_instance" "ibrah-useast-1a" {
   ami           = "ami-40d28157"
   instance_type = "t2.micro"
 
-  tags {
+  tags = {
     Name = "ibrah-useast-1a"
   }
 }
