@@ -1,2 +1,3 @@
 
-Personal terraform playground
+# Personal infrastructure using AWS as my provider & terraform as my IAC tool
+
